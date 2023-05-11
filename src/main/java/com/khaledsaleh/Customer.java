@@ -1,8 +1,21 @@
 package com.khaledsaleh;
 
+import jakarta.persistence.*;
+
 import java.util.Objects;
 
+@Entity
 public class Customer {
+    @Id
+    @SequenceGenerator(
+            name="customer_id_sequence",
+            sequenceName = "customer_id_sequence",
+            allocationSize= 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "customer_id_sequence"
+    )
     private Integer id;
     private String name;
     private String email;
@@ -14,6 +27,7 @@ public class Customer {
         this.email = email;
         this.age = age;
     }
+    public Customer(){}
 
     public Integer getId() {
         return id;
