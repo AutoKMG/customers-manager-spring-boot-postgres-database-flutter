@@ -1,8 +1,6 @@
 package com.khaledsaleh;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,5 +15,14 @@ public class CustomerController {
     @GetMapping("/customers")
     public List<Customer> getCustomers(){
         return customerRepository.findAll();
+    }
+
+    @PostMapping("/add-customer")
+    public void addCustomer(@RequestBody NewCustomerRequest request){
+        Customer customer = new Customer();
+        customer.setName(request.name());
+        customer.setAge(request.age());
+        customer.setEmail(request.email());
+        customerRepository.save(customer);
     }
 }
