@@ -1,1 +1,2 @@
 Frontend/build/* linguist-vendored
+*.dart linguist-language=Dart
