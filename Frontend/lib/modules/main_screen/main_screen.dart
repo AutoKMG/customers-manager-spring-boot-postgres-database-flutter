@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:frontend_customers/shared/components/adding_customer_dialog.dart';
-import 'package:frontend_customers/shared/components/customer_listile.dart';
-import 'package:frontend_customers/shared/logic/customer_controller/handler.dart';
+import 'package:frontend/shared/components/adding_customer_dialog.dart';
+import 'package:frontend/shared/components/customer_listile.dart';
+import 'package:frontend/shared/logic/customer_controller/handler.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
@@ -32,12 +32,19 @@ class MainScreen extends StatelessWidget {
                   }
                 },
               ),
-              SizedBox(height: 10,),
-              IconButton(onPressed: (){
-                showDialog(context: context, builder: (context) {
-                  return addingCustomer(context, appHandler);
-                },);
-              }, icon: const Icon(Icons.add)),
+              SizedBox(
+                height: 10,
+              ),
+              IconButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return addingCustomer(context, appHandler);
+                      },
+                    );
+                  },
+                  icon: const Icon(Icons.add)),
             ],
           ),
         );

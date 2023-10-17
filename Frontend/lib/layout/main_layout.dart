@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend_customers/modules/main_screen/main_screen.dart';
-import 'package:frontend_customers/shared/components/adding_customer_dialog.dart';
+import 'package:frontend/modules/main_screen/main_screen.dart';
+import 'package:frontend/shared/components/adding_customer_dialog.dart';
 
 class MainLayout extends StatelessWidget {
   const MainLayout({super.key});

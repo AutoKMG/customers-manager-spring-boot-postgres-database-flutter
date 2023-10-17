@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:frontend_customers/models/customer.dart';
-import 'package:frontend_customers/shared/logic/customer_controller/handler.dart';
+import 'package:frontend/models/customer.dart';
+import 'package:frontend/shared/logic/customer_controller/handler.dart';
 
 Widget customerListTile(Customer customer, AppHandler appHandler) {
   return ListTile(

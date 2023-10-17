@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:frontend_customers/models/customer.dart';
-import 'package:frontend_customers/shared/network/end_points.dart';
-import 'package:frontend_customers/shared/network/remote/dio_helper.dart';
+import 'package:frontend/models/customer.dart';
+import 'package:frontend/shared/network/end_points.dart';
+import 'package:frontend/shared/network/remote/dio_helper.dart';
 
 part 'state.dart';
 
@@ -27,16 +27,19 @@ class AppHandler extends Cubit<AppState> {
       getCustomers();
     });
   }
-  void addCustomer(String name, String email, int age){
-    DioHelper.postData(url: mainUrl, data:
-      {
+
+  void addCustomer(String name, String email, int age) {
+    DioHelper.postData(
+      url: mainUrl,
+      data: {
         "name": "${name}",
-        "email":"${email}",
+        "email": "${email}",
         "age": age,
-      },).then((value) {
-        print("value from post ${value.data}");
-        emit(AppStateCustomerAdded());
-        getCustomers();
+      },
+    ).then((value) {
+      print("value from post ${value.data}");
+      emit(AppStateCustomerAdded());
+      getCustomers();
     });
   }
 }

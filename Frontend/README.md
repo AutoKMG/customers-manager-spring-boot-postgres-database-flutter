@@ -1,4 +1,4 @@
-# frontend_customers
+# frontend
 
 A new Flutter project.
 

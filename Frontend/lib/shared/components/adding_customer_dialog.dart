@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:frontend_customers/models/customer.dart';
-import 'package:frontend_customers/shared/components/defaultFormField.dart';
-import 'package:frontend_customers/shared/logic/customer_controller/handler.dart';
+import 'package:frontend/models/customer.dart';
+import 'package:frontend/shared/components/defaultFormField.dart';
+import 'package:frontend/shared/logic/customer_controller/handler.dart';
 
 Widget addingCustomer(BuildContext context, AppHandler appHandler) {
   TextEditingController nameController = new TextEditingController();

@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:frontend_customers/layout/main_layout.dart';
-import 'package:frontend_customers/shared/logic/customer_controller/handler.dart';
-import 'package:frontend_customers/shared/network/remote/dio_helper.dart';
+import 'package:frontend/layout/main_layout.dart';
+import 'package:frontend/shared/logic/customer_controller/handler.dart';
+import 'package:frontend/shared/network/remote/dio_helper.dart';
 
 void main() {
   DioHelper.init();
